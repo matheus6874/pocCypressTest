@@ -4,7 +4,7 @@
   "description": "SImple Poc task using Cypress and Typescript",
   "main": "index.js",
   "scripts": {
-    "cypress:open": "export ELECTRON_DISABLE_GPU=true && cypress open",
+    "cypress:open": "npx cypress cache clear && cypress open",
     "test": "cypress run"
   },
   "repository": {
