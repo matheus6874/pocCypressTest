@@ -6,8 +6,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
-      - name: Cypress run
-        run: cypress open --config-file=cypress.config.ts
-        
+      - name: Install dependencies
+        run: npm ci
+      - name: Run Cypress tests
+        uses: cypress-io/github-action@v5
+        with:
+          run: cypress open --config-file=cypress.config.ts
+          config-file: cypress.config.ts
+          record: false
+          browser: chrome
+          headless: true
+      
