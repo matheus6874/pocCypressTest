@@ -20,13 +20,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 14
+      - name: Install Ajv
+        run: npm install ajv
 
       - name: Install dependencies
         run: npm ci
       
-      - name: Install Ajv
-        run: npm install ajv
-
       - name: Build project
         run: npm run build
 
