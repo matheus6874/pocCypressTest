@@ -1,9 +1,7 @@
 import { defineConfig } from 'cypress'
 
-module.exports = defineConfig({
+export default defineConfig({
   e2e: {
-    setupNodeEvents(on, config) {
-    },
     baseUrl: 'https://www.latlong.net/',
   },
   env: {
@@ -15,4 +13,4 @@ module.exports = defineConfig({
     baseUrlDemoqa: 'https://demoqa.com/BookStore/v1',
   },
   chromeWebSecurity: false
-});
+})
