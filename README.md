@@ -16,3 +16,7 @@ Run `npm install` (or `npm i` for the short version) to install the dev dependen
 Run `npm test` (or `npm t` for the short version) to run the test in headless mode.
 
 Or, run `npm run cy:open` to open Cypress in interactive mode.
+
+## Github actions
+The project is configured to run tests automatically in the continuous integration pipeline using GitHub Actions.
+When specific events occur, such as push on branches or pull requests, GitHub Actions is triggered and automatically starts the test execution.
