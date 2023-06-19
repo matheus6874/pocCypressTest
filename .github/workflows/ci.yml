@@ -23,9 +23,6 @@ jobs:
 
       - name: Install dependencies
         run: npm i
-      
-      - name: Build project
-        run: npm run build
-
+    
       - name: Run Cypress tests
         run: npx cypress run --config-file cypress.config.ts
