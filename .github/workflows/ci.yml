@@ -4,11 +4,14 @@ jobs:
   cypress-run:
     runs-on: ubuntu-20.04
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
       - name: Run Cypress tests
         uses: cypress-io/github-action@v2
         with:
           config-file: cypress.config.ts
-          working-directory: truck_mate_front
+          working-directory: pocCypressTest
           build: npm run build
           start: npm start
-          wait-on: 'http://localhost:3000'
